@@ -61,11 +61,15 @@ ApplicationWindow
                         }
                     }
                 }
+                PageHeader {
+                    // I thought it was a bit weird to have just an empty page with numbers.
+                    title: "Stopwatch"
+                }
 
                 MouseArea {
                     anchors.fill: parent
                     anchors.margins: Theme.paddingLarge
-                    onClicked: timer.running ? (timer.stop(), timer.running = false, console.debug("stop")) : (timer.start(), timer.running = true, console.debug("start"))
+                    onClicked: timer.running ? (timer.stop(), timer.running = false/*, console.debug("stop")*/) : (timer.start(), timer.running = true/*, console.debug("start")*/)
 
                 }
 
@@ -74,6 +78,13 @@ ApplicationWindow
                     anchors.verticalCenter: parent.verticalCenter
                     text: timer.m + ":" + timer.s + "." + timer.ms
                     font.pixelSize: Theme.fontSizeExtraLarge * 3
+                }
+                Label {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.bottom: parent.bottom
+                    anchors.bottomMargin: Theme.paddingLarge * 2
+                    color: Theme.highlightColor
+                    text: timer.running ? "Tap anywhere to stop" : "Tap anywhere to start"
                 }
 
             }
