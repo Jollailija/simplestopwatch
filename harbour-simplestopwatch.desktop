@@ -4,4 +4,4 @@ X-Nemo-Application-Type=silica-qt5
 Icon=harbour-simplestopwatch
 Exec=harbour-simplestopwatch
 Name=Stopwatch
-Name[fi]=Sekunttikello
+Name[fi]=Sekuntikello

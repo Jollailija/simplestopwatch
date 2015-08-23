@@ -5,6 +5,14 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Tue Aug 18 2015 jollailija <jollailija@gmail.com> 0.1.1-1
+- Cool icon by Moth
+- Version number in Pulley Menu
+- Added Finnish translation
+
+* Tue Aug 18 2015 jollailija <jollailija@gmail.com> 0.1-3
+- Better icon
+
 * Tue Aug 18 2015 jollailija <jollailija@gmail.com> 0.1-2
 - Added page header
 - Added instructions

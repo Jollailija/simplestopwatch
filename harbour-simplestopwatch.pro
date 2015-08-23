@@ -21,7 +21,8 @@ OTHER_FILES += qml/harbour-simplestopwatch.qml \
     rpm/harbour-simplestopwatch.yaml \
     translations/*.ts \
     harbour-simplestopwatch.desktop \
-    rpm/harbour-simplestopwatch.changes
+    rpm/harbour-simplestopwatch.changes \
+    translations/harbour-simplestopwatch-fi.ts
 
 # to disable building translations every time, comment out the
 # following CONFIG line
@@ -31,5 +32,5 @@ CONFIG += sailfishapp_i18n
 # planning to localize your app, remember to comment out the
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
-# TRANSLATIONS += translations/harbour-simplestopwatch-de.ts
-
+# Okay, Finnish translation is there now. Lets see if it works :)
+TRANSLATIONS += translations/harbour-simplestopwatch-fi.ts

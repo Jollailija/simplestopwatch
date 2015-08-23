@@ -51,6 +51,11 @@ ApplicationWindow
 
                 PullDownMenu {
                     enabled: !timer.running
+                    Label {
+                        text: qsTr("Version ") + "0.1.1-1"
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        color: Theme.highlightColor
+                    }
                     MenuItem {
                         text: "Reset"
                         onClicked: {
@@ -63,7 +68,7 @@ ApplicationWindow
                 }
                 PageHeader {
                     // I thought it was a bit weird to have just an empty page with numbers.
-                    title: "Stopwatch"
+                    title: qsTr("Stopwatch")
                 }
 
                 MouseArea {
@@ -84,7 +89,7 @@ ApplicationWindow
                     anchors.bottom: parent.bottom
                     anchors.bottomMargin: Theme.paddingLarge * 2
                     color: Theme.highlightColor
-                    text: timer.running ? "Tap anywhere to stop" : "Tap anywhere to start"
+                    text: timer.running ? qsTr("Tap anywhere to stop") : qsTr("Tap anywhere to start")
                 }
 
             }
