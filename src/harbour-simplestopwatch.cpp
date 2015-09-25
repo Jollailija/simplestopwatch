@@ -1,6 +1,5 @@
 /*
-  Copyright (C) 2013 Jolla Ltd.
-  Contact: Thomas Perl <thomas.perl@jollamobile.com>
+  Copyright (C) 2013-15 Thomas Tanghus <thomas@tanghus.net>
   All rights reserved.
 
   You may use this file under the terms of BSD license as follows:
@@ -34,6 +33,18 @@
 
 #include <sailfishapp.h>
 
+#include <QGuiApplication>
+//#include <qdeclarative.h>
+//#include <QDeclarativeView>
+#include <QQmlEngine>
+#include <QQuickView>
+#include <QQmlContext>
+#include <QLocale>
+#include <QTimer>
+#include <QTranslator>
+#include <QDebug>
+#include "qmlsettings.h"
+#include "display.h"
 
 int main(int argc, char *argv[])
 {
@@ -46,6 +57,41 @@ int main(int argc, char *argv[])
     //
     // To display the view, call "show()" (will show fullscreen on device).
 
-    return SailfishApp::main(argc, argv);
+    //return SailfishApp::main(argc, argv);
+
+    //QGuiApplication* app = SailfishApp::application(argc, argv);
+    QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
+    app->setApplicationVersion(QString(APP_VERSION));
+    QmlSettings *settings = new QmlSettings();
+    Display *display = new Display();
+    //qmlRegisterType<Insomniac>("Insomniac", 1, 0, "Insomniac");
+
+    QQuickView* view = SailfishApp::createView();
+    qDebug() << "Import path" << SailfishApp::pathTo("lib/").toLocalFile();
+    view->engine()->addImportPath(SailfishApp::pathTo("lib/").toLocalFile());
+    view->engine()->addImportPath(SailfishApp::pathTo("qml/components/").toLocalFile());
+    view->engine()->addImportPath(SailfishApp::pathTo("qml/pages/").toLocalFile());
+
+    QTranslator *translator = new QTranslator;
+
+    //Insomnia *insomniac = new Insomnia();
+    //insomniac->setSingleShot(true);
+    //insomniac->setTimerWindow(10);
+
+    QString locale = QLocale::system().name();
+
+    qDebug() << "Translations:" << SailfishApp::pathTo("translations").toLocalFile() + "/" + locale + ".qm";
+
+    if(!translator->load(SailfishApp::pathTo("translations").toLocalFile() + "/" + locale + ".qm")) {
+        qDebug() << "Couldn't load translation";
+    }
+    app->installTranslator(translator);
+
+    //view->rootContext()->setContextProperty("insomniac", insomniac);
+    view->rootContext()->setContextProperty("display", display);
+    view->rootContext()->setContextProperty("settings", settings);
+    view->setSource(SailfishApp::pathTo("qml/harbour-simplestopwatch.qml"));
+    view->showFullScreen();
+    return app->exec();
 }
 
