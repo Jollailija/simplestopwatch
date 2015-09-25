@@ -32,5 +32,8 @@ CONFIG += sailfishapp_i18n
 # planning to localize your app, remember to comment out the
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
+
 # Okay, Finnish translation is there now. Lets see if it works :)
 TRANSLATIONS += translations/harbour-simplestopwatch-fi.ts
+# Thanks again, eson57!
+TRANSLATIONS += translations/harbour-simplestopwatch-sv.ts

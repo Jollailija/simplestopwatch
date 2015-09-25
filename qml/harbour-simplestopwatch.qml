@@ -29,6 +29,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+//import harbour.simplestopwatch.insomniac 1.0
 
 ApplicationWindow
 {
@@ -52,7 +53,7 @@ ApplicationWindow
                 PullDownMenu {
                     enabled: !timer.running
                     Label {
-                        text: qsTr("Version ") + "0.1.1-1"
+                        text: qsTr("Version ") + "0.2.0-1"
                         anchors.horizontalCenter: parent.horizontalCenter
                         color: Theme.highlightColor
                     }
