@@ -5,3 +5,4 @@ Icon=harbour-simplestopwatch
 Exec=harbour-simplestopwatch
 Name=Stopwatch
 Name[fi]=Sekuntikello
+Name[sv]=Stoppur
