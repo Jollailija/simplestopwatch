@@ -1,0 +1,54 @@
+15:39:04: Running steps for project harbour-simplestopwatch...
+15:39:04: Start SDK: The "MerSDK" virtual machine is already running. Nothing to do.
+15:39:04: Starting: "E:\SailfishOS\settings\SailfishBeta6\mer-sdk-tools\MerSDK\SailfishOS-i486\qmake.cmd" E:\Users\jollailija\githubrepos\simplestopwatch\harbour-simplestopwatch.pro -r -spec linux-g++ "CONFIG+=debug" "CONFIG+=declarative_debug" "CONFIG+=qml_debug"
+
+Building target platforms: i486-meego-linux-gnu
+Building for target i486-meego-linux-gnu
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.YouayT
+Reading /home/src1/githubrepos/simplestopwatch/src/insomniac/insomniac.pro [/home/src1/githubrepos/build-harbour-simplestopwatch-MerSDK_SailfishOS_i486-Debug/src/insomniac]
+15:39:08: The process "E:\SailfishOS\settings\SailfishBeta6\mer-sdk-tools\MerSDK\SailfishOS-i486\qmake.cmd" exited normally.
+15:39:08: Starting: "E:\SailfishOS\settings\SailfishBeta6\mer-sdk-tools\MerSDK\SailfishOS-i486\make.cmd" 
+Building target platforms: i486-meego-linux-gnu
+Building for target i486-meego-linux-gnu
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.hfQCwC
+cd src/insomniac/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake /home/src1/githubrepos/simplestopwatch/src/insomniac/insomniac.pro QMAKE_CFLAGS_RELEASE=-O2\ -g\ -pipe\ -Wall\ -Wp,-D_FORTIFY_SOURCE=2\ -fexceptions\ -fstack-protector\ --param=ssp-buffer-size=4\ -Wformat\ -Wformat-security\ -m32\ -msse\ -msse2\ -march=i686\ -mfpmath=sse\ -mtune=generic\ -fno-omit-frame-pointer\ -fasynchronous-unwind-tables QMAKE_CFLAGS_DEBUG=-O2\ -g\ -pipe\ -Wall\ -Wp,-D_FORTIFY_SOURCE=2\ -fexceptions\ -fstack-protector\ --param=ssp-buffer-size=4\ -Wformat\ -Wformat-security\ -m32\ -msse\ -msse2\ -march=i686\ -mfpmath=sse\ -mtune=generic\ -fno-omit-frame-pointer\ -fasynchronous-unwind-tables QMAKE_CXXFLAGS_RELEASE=-O2\ -g\ -pipe\ -Wall\ -Wp,-D_FORTIFY_SOURCE=2\ -fexceptions\ -fstack-protector\ --param=ssp-buffer-size=4\ -Wformat\ -Wformat-security\ -m32\ -msse\ -msse2\ -march=i686\ -mfpmath=sse\ -mtune=generic\ -fno-omit-frame-pointer\ -fasynchronous-unwind-tables QMAKE_CXXFLAGS_DEBUG=-O2\ -g\ -pipe\ -Wall\ -Wp,-D_FORTIFY_SOURCE=2\ -fexceptions\ -fstack-protector\ --param=ssp-buffer-size=4\ -Wformat\ -Wformat-security\ -m32\ -msse\ -msse2\ -march=i686\ -mfpmath=sse\ -mtune=generic\ -fno-omit-frame-pointer\ -fasynchronous-unwind-tables QMAKE_STRIP=: PREFIX=/usr -spec linux-g++ CONFIG+=debug CONFIG+=declarative_debug CONFIG+=qml_debug -o Makefile ) && make -f Makefile 
+make[1]: Entering directory `/home/src1/githubrepos/build-harbour-simplestopwatch-MerSDK_SailfishOS_i486-Debug/src/insomniac'
+make[1]: Nothing to be done for `first'.
+make[1]: Leaving directory `/home/src1/githubrepos/build-harbour-simplestopwatch-MerSDK_SailfishOS_i486-Debug/src/insomniac'
+15:39:13: The process "E:\SailfishOS\settings\SailfishBeta6\mer-sdk-tools\MerSDK\SailfishOS-i486\make.cmd" exited normally.
+15:39:13: Start Emulator: The "SailfishOS Emulator" virtual machine is already running. Nothing to do.
+15:39:13: Deploying binaries...
+15:39:13: Starting: "E:\SailfishOS\settings\SailfishBeta6\mer-sdk-tools\MerSDK\SailfishOS-i486\deploy.cmd" --rsync
+Building target platforms: i486-meego-linux-gnu
+Building for target i486-meego-linux-gnu
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.MUOmsk
+cd src/insomniac/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake /home/src1/githubrepos/simplestopwatch/src/insomniac/insomniac.pro QMAKE_CFLAGS_RELEASE=-O2\ -g\ -pipe\ -Wall\ -Wp,-D_FORTIFY_SOURCE=2\ -fexceptions\ -fstack-protector\ --param=ssp-buffer-size=4\ -Wformat\ -Wformat-security\ -m32\ -msse\ -msse2\ -march=i686\ -mfpmath=sse\ -mtune=generic\ -fno-omit-frame-pointer\ -fasynchronous-unwind-tables QMAKE_CFLAGS_DEBUG=-O2\ -g\ -pipe\ -Wall\ -Wp,-D_FORTIFY_SOURCE=2\ -fexceptions\ -fstack-protector\ --param=ssp-buffer-size=4\ -Wformat\ -Wformat-security\ -m32\ -msse\ -msse2\ -march=i686\ -mfpmath=sse\ -mtune=generic\ -fno-omit-frame-pointer\ -fasynchronous-unwind-tables QMAKE_CXXFLAGS_RELEASE=-O2\ -g\ -pipe\ -Wall\ -Wp,-D_FORTIFY_SOURCE=2\ -fexceptions\ -fstack-protector\ --param=ssp-buffer-size=4\ -Wformat\ -Wformat-security\ -m32\ -msse\ -msse2\ -march=i686\ -mfpmath=sse\ -mtune=generic\ -fno-omit-frame-pointer\ -fasynchronous-unwind-tables QMAKE_CXXFLAGS_DEBUG=-O2\ -g\ -pipe\ -Wall\ -Wp,-D_FORTIFY_SOURCE=2\ -fexceptions\ -fstack-protector\ --param=ssp-buffer-size=4\ -Wformat\ -Wformat-security\ -m32\ -msse\ -msse2\ -march=i686\ -mfpmath=sse\ -mtune=generic\ -fno-omit-frame-pointer\ -fasynchronous-unwind-tables QMAKE_STRIP=: PREFIX=/usr -spec linux-g++ CONFIG+=debug CONFIG+=declarative_debug CONFIG+=qml_debug -o Makefile ) && make -f Makefile install
+make[1]: Entering directory `/home/src1/githubrepos/build-harbour-simplestopwatch-MerSDK_SailfishOS_i486-Debug/src/insomniac'
+install -m 755 -p "libinsomniac.so" "/home/deploy/installroot/usr/share/harbour-simplestopwatch/lib/harbour/simplestopwatch/insomniac/libinsomniac.so"
+install -m 755 -p /home/src1/githubrepos/simplestopwatch/src/insomniac/qmldir /home/deploy/installroot/usr/share/harbour-simplestopwatch/lib/harbour/simplestopwatch/insomniac/
+make[1]: Leaving directory `/home/src1/githubrepos/build-harbour-simplestopwatch-MerSDK_SailfishOS_i486-Debug/src/insomniac'
+lupdate -noobsolete "/home/src1/githubrepos/simplestopwatch/src" "/home/src1/githubrepos/simplestopwatch/qml" -ts "/home/src1/githubrepos/simplestopwatch/translations/harbour-simplestopwatch.ts" "/home/src1/githubrepos/simplestopwatch/translations/harbour-simplestopwatch-fi.ts" "/home/src1/githubrepos/simplestopwatch/translations/harbour-simplestopwatch-sv.ts" && mkdir -p translations && [ "/home/src1/githubrepos/build-harbour-simplestopwatch-MerSDK_SailfishOS_i486-Debug" != "/home/src1/githubrepos/simplestopwatch" -a 1 -eq 1 ] && cp -af "/home/src1/githubrepos/simplestopwatch/translations/harbour-simplestopwatch-fi.ts" "/home/src1/githubrepos/simplestopwatch/translations/harbour-simplestopwatch-sv.ts" "/home/src1/githubrepos/build-harbour-simplestopwatch-MerSDK_SailfishOS_i486-Debug/translations" || : ; [ 1 -eq 1 ] && lrelease -nounfinished "/home/src1/githubrepos/build-harbour-simplestopwatch-MerSDK_SailfishOS_i486-Debug/translations/harbour-simplestopwatch-fi.ts" "/home/src1/githubrepos/build-harbour-simplestopwatch-MerSDK_SailfishOS_i486-Debug/translations/harbour-simplestopwatch-sv.ts" || :
+Scanning directory '/home/src1/githubrepos/simplestopwatch/src'...
+Scanning directory '/home/src1/githubrepos/simplestopwatch/qml'...
+Updating '../simplestopwatch/translations/harbour-simplestopwatch.ts'...
+    Found 4 source text(s) (0 new and 4 already existing)
+Updating '../simplestopwatch/translations/harbour-simplestopwatch-fi.ts'...
+    Found 4 source text(s) (0 new and 4 already existing)
+Updating '../simplestopwatch/translations/harbour-simplestopwatch-sv.ts'...
+    Found 4 source text(s) (0 new and 4 already existing)
+Updating '/home/src1/githubrepos/build-harbour-simplestopwatch-MerSDK_SailfishOS_i486-Debug/translations/harbour-simplestopwatch-fi.qm'...
+    Generated 4 translation(s) (4 finished and 0 unfinished)
+Updating '/home/src1/githubrepos/build-harbour-simplestopwatch-MerSDK_SailfishOS_i486-Debug/translations/harbour-simplestopwatch-sv.qm'...
+    Generated 4 translation(s) (4 finished and 0 unfinished)
+install -m 755 -p /home/src1/githubrepos/build-harbour-simplestopwatch-MerSDK_SailfishOS_i486-Debug/translations/harbour-simplestopwatch-fi.qm /home/deploy/installroot/usr/share/harbour-simplestopwatch/translations/
+install -m 755 -p /home/src1/githubrepos/build-harbour-simplestopwatch-MerSDK_SailfishOS_i486-Debug/translations/harbour-simplestopwatch-sv.qm /home/deploy/installroot/usr/share/harbour-simplestopwatch/translations/
+Error on file "/home/deploy/installroot/usr/share/applications/*.desktop": No such file or directory
+error: Bad exit status from /var/tmp/rpm-tmp.MUOmsk (%install)
+    Bad exit status from /var/tmp/rpm-tmp.MUOmsk (%install)
+
+
+RPM build errors:
+15:39:19: The process "E:\SailfishOS\settings\SailfishBeta6\mer-sdk-tools\MerSDK\SailfishOS-i486\deploy.cmd" exited with code 1.
+Error while building/deploying project harbour-simplestopwatch (kit: MerSDK-SailfishOS-i486)
+When executing step 'Rsync'
+15:39:19: Elapsed time: 00:15.
