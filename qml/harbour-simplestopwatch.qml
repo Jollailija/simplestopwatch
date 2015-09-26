@@ -29,7 +29,10 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-//import harbour.simplestopwatch.insomniac 1.0
+import harbour.simplestopwatch.insomniac 1.0
+
+// Insomniac (C) Thomas Tanghus, see his github at https://github.com/tanghus/ or email him at thomas@tanghus.net for more information.
+// Thanks for Thomas Tanghus & Coderus for helping me out with importing Insomniac!
 
 ApplicationWindow
 {
@@ -42,6 +45,17 @@ ApplicationWindow
         interval: 100
         repeat: true
         onTriggered: (timer.ms < 9) ? (timer.ms++ ) : (timer.ms = 0, timer.s > 58 ? (timer.s = 0, timer.m++) : timer.s++)
+    }
+    Insomniac {
+        running: timer.running
+        repeat: true
+        timerWindow: 10
+        onTimeout: {
+            console.log("insomniac timed out")
+        }
+        onError: {
+            console.warn('Error in wake-up timer')
+        }
     }
 
     initialPage: Component {
@@ -69,7 +83,7 @@ ApplicationWindow
                 }
                 PageHeader {
                     // I thought it was a bit weird to have just an empty page with numbers.
-                    title: qsTr("Stopwatch")
+                    title: qsTr("Stopwatch") + APP_VERSION
                 }
 
                 MouseArea {
