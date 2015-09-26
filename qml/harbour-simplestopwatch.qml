@@ -31,7 +31,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.simplestopwatch.insomniac 1.0
 
-// Insomniac (C) Thomas Tanghus, see his github at https://github.com/tanghus/ or email him at thomas@tanghus.net for more information.
+// Insomniac (C) Thomas Tanghus, see his github at https://github.com/tanghus/
 
 ApplicationWindow
 {
