@@ -14,6 +14,18 @@ TARGET = harbour-simplestopwatch
 
 #CONFIG += sailfishapp
 
+# Are these what I need?
+DEPLOYMENT_PATH = /usr/share/$${TARGET}
+qml.files = qml
+qml.path = $${DEPLOYMENT_PATH}
+
+desktop.files = $${TARGET}.desktop
+desktop.path = /usr/share/applications
+
+icon.files = $${TARGET}.png
+icon.path = /usr/share/icons/hicolor/86x86/apps
+#
+
 SOURCES += src/harbour-simplestopwatch.cpp
 
 OTHER_FILES += qml/harbour-simplestopwatch.qml \
@@ -38,5 +50,8 @@ TRANSLATIONS += translations/harbour-simplestopwatch-fi.ts
 # Thanks again, eson57!
 TRANSLATIONS += translations/harbour-simplestopwatch-sv.ts
 
+# Is this line needed?
+INSTALLS += desktop icon qml translations
+
 TEMPLATE = subdirs
-SUBDIRS = src/insomniac
+SUBDIRS = src/insomniac src
