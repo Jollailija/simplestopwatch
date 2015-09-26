@@ -29,9 +29,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import harbour.simplestopwatch.insomniac 1.0
-
-// Insomniac (C) Thomas Tanghus, see his github at https://github.com/tanghus/
+//import harbour.simplestopwatch.insomniac 1.0
 
 ApplicationWindow
 {
@@ -45,13 +43,6 @@ ApplicationWindow
         repeat: true
         onTriggered: (timer.ms < 9) ? (timer.ms++ ) : (timer.ms = 0, timer.s > 58 ? (timer.s = 0, timer.m++) : timer.s++)
     }
-    Insomniac {
-            id: insomniac
-            repeat: true
-            running: timer.running
-            timerWindow: 10
-            onTimeout: console.debug("insomniac")
-        }
 
     initialPage: Component {
         Page {

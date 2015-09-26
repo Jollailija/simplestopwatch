@@ -37,7 +37,3 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/harbour-simplestopwatch-fi.ts
 # Thanks again, eson57!
 TRANSLATIONS += translations/harbour-simplestopwatch-sv.ts
-
-TEMPLATE = subdirs
-SUBDIRS = src/insomniac src/folderlistmodel src
-
