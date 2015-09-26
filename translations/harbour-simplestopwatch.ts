@@ -4,6 +4,10 @@
 <context>
     <name>harbour-simplestopwatch</name>
     <message>
+        <source>Version </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Stopwatch</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13,10 +17,6 @@
     </message>
     <message>
         <source>Tap anywhere to start</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Version </source>
         <translation type="unfinished"></translation>
     </message>
 </context>

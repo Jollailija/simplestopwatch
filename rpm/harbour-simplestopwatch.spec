@@ -14,10 +14,10 @@ Name:       harbour-simplestopwatch
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Simple stopwatch
 Version:    0.2.0
-Release:    1
+Release:    2
 Group:      Qt/Qt
-License:    LICENSE
-URL:        http://example.org/
+License:    BSD
+URL:        https://github.com/jollailija/simplestopwatch
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-simplestopwatch.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
@@ -28,7 +28,7 @@ BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  desktop-file-utils
 
 %description
-Short description of my SailfishOS Application
+A super simple open source stopwatch app for Sailfish OS
 
 
 %prep

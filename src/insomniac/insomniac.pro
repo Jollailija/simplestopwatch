@@ -7,7 +7,7 @@ CONFIG += qt plugin
 #LIBS += -liphb
 
 TARGET = $$qtLibraryTarget($$TARGET)
-target.path = /usr/share/harbour-$$PROJECT/lib/harbour/$$PROJECT/insomniac
+target.path = /usr/share/harbour-$$PROJECT/harbour/$$PROJECT/insomniac
 
 uri = harbour.$$PROJECT.insomniac
 

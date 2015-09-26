@@ -36,6 +36,12 @@ import harbour.simplestopwatch.insomniac 1.0
 
 ApplicationWindow
 {
+    function toggleTimer() {
+        timer.running ?
+                    (timer.stop(), insomniac.stop(), timer.running = false)
+                  : (timer.start(), insomniac.start(), timer.running = true)
+    }
+
     Timer {
         id: timer
         property bool running: false
@@ -47,15 +53,10 @@ ApplicationWindow
         onTriggered: (timer.ms < 9) ? (timer.ms++ ) : (timer.ms = 0, timer.s > 58 ? (timer.s = 0, timer.m++) : timer.s++)
     }
     Insomniac {
-        running: timer.running
+        id: insomniac
         repeat: true
-        timerWindow: 10
-        onTimeout: {
-            console.log("insomniac timed out")
-        }
-        onError: {
-            console.warn('Error in wake-up timer')
-        }
+        interval: 1000
+        //timerWindow: 10
     }
 
     initialPage: Component {
@@ -67,7 +68,7 @@ ApplicationWindow
                 PullDownMenu {
                     enabled: !timer.running
                     Label {
-                        text: qsTr("Version ") + "0.2.0-1"
+                        text: qsTr("Version ") + "0.2.0-2"
                         anchors.horizontalCenter: parent.horizontalCenter
                         color: Theme.highlightColor
                     }
@@ -83,13 +84,13 @@ ApplicationWindow
                 }
                 PageHeader {
                     // I thought it was a bit weird to have just an empty page with numbers.
-                    title: qsTr("Stopwatch") + APP_VERSION
+                    title: qsTr("Stopwatch")
                 }
 
                 MouseArea {
                     anchors.fill: parent
                     anchors.margins: Theme.paddingLarge
-                    onClicked: timer.running ? (timer.stop(), timer.running = false/*, console.debug("stop")*/) : (timer.start(), timer.running = true/*, console.debug("start")*/)
+                    onClicked: toggleTimer()
 
                 }
 
@@ -131,13 +132,14 @@ ApplicationWindow
 
                 CoverAction {
                     iconSource: timer.running ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
-                    onTriggered: timer.running ? (timer.stop(), timer.running = false, console.debug("stop")) : (timer.start(), timer.running = true, console.debug("start"))
+                    onTriggered: toggleTimer()
                 }
 
                 CoverAction {
                     iconSource: "image://theme/icon-cover-refresh"
                     onTriggered: {
                         timer.stop()
+                        insomniac.stop()
                         timer.running = false
                         timer.ms = 0
                         timer.s = 0
