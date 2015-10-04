@@ -67,10 +67,8 @@ ApplicationWindow
 
                 PullDownMenu {
                     enabled: !timer.running
-                    Label {
-                        text: qsTr("Version ") + "0.2.0-2"
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        color: Theme.highlightColor
+                    MenuLabel {
+                        text: qsTr("Version ") + "0.2.0-3"
                     }
                     MenuItem {
                         text: "Reset"

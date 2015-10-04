@@ -6,6 +6,8 @@
 Name:       harbour-simplestopwatch
 
 # >> macros
+%define __provides_exclude_from ^%{_datadir}/.*$
+%define __requires_exclude ^libinsomniac|libc.*$
 # << macros
 
 %{!?qtc_qmake:%define qtc_qmake %qmake}
@@ -14,7 +16,7 @@ Name:       harbour-simplestopwatch
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Simple stopwatch
 Version:    0.2.0
-Release:    2
+Release:    3
 Group:      Qt/Qt
 License:    BSD
 URL:        https://github.com/jollailija/simplestopwatch
@@ -64,9 +66,13 @@ desktop-file-install --delete-original       \
 %files
 %defattr(-,root,root,-)
 %{_bindir}
+%{_bindir}/%{name}
+%{_datadir}
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/86x86/apps/%{name}.png
+%{_datadir}/%{name}/translations
+%{_datadir}/%{name}/qml
 %{_datadir}/%{name}/harbour/simplestopwatch/insomniac
 %{_datadir}/%{name}/harbour/simplestopwatch
 %{_datadir}/%{name}/harbour

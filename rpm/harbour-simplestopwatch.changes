@@ -5,6 +5,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Sat Sep 26 2015 jollailija <jollailija@gmail.com> 0.2.0-3
+- Fixed some RMP Validator related stuff :)
+
 * Sat Sep 26 2015 jollailija <jollailija@gmail.com> 0.2.0-2
 - Fixed translations
 

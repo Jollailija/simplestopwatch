@@ -50,6 +50,9 @@ TRANSLATIONS += translations/harbour-simplestopwatch-fi.ts
 # Thanks again, eson57!
 TRANSLATIONS += translations/harbour-simplestopwatch-sv.ts
 
+translations.files = translations
+translations.path = $${DEPLOYMENT_PATH}
+
 # Is this line needed?
 INSTALLS += desktop icon qml translations
 
