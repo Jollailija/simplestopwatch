@@ -54,9 +54,21 @@ ApplicationWindow
     }
     Insomniac {
         id: insomniac
-        repeat: true
+        repeat: false
         interval: 1000
-        //timerWindow: 10
+        timerWindow: 5
+        onTimeout: {
+            wakeUp()
+        }
+        onError: {
+            console.warn('Error in wake-up timer')
+        }
+    }
+    function wakeUp() {
+        if(insomniac.running) {
+                    insomniac.stop()
+                }
+        insomniac.start()
     }
 
     initialPage: Component {
@@ -68,7 +80,7 @@ ApplicationWindow
                 PullDownMenu {
                     enabled: !timer.running
                     MenuLabel {
-                        text: qsTr("Version ") + "0.2.0-3"
+                        text: qsTr("Version ") + "0.2.1-1"
                     }
                     MenuItem {
                         text: "Reset"
@@ -95,7 +107,9 @@ ApplicationWindow
                 Label {
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.verticalCenter: parent.verticalCenter
-                    text: timer.m + ":" + timer.s + "." + timer.ms
+                    text: (timer.s >= 10) ?
+                              (timer.m + ":" + timer.s + "." + timer.ms) :
+                              (timer.m + ":0" + timer.s + "." + timer.ms)
                     font.pixelSize: Theme.fontSizeExtraLarge * 3
                 }
                 Label {

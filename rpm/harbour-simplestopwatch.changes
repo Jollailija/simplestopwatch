@@ -5,6 +5,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Sun Nov 1 2015 jollailija <jollailija@gmail.com> 0.2.1-1
+- Maybe Insomniac works this time?
+- Bumbed version number to meet store requirements
+
 * Sat Sep 26 2015 jollailija <jollailija@gmail.com> 0.2.0-3
 - Fixed some RMP Validator related stuff :)
 
